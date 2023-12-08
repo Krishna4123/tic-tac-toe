@@ -16,12 +16,16 @@ body{
 .cell{
     background-position: right;
     background-image: url(https://e0.pxfuel.com/wallpapers/44/1/desktop-wallpaper-blue-geometric-technology-honeycomb-background-blue-technology-blue-black-background-for-dark-blue-geometric-thumbnail.jpg);
+    text-align: center;
+    font-size: 100px;
+    color: rgb(71, 176, 241);
     border:2px solid;
     border-radius: 15px;
     border-color: black;
     height:100px;
     width:100px;
     cursor:pointer;
+ 
 }
 
 .cells {
@@ -33,9 +37,10 @@ body{
 }
 
 .footer > #statustext{
+    border:5px dotted;
     padding:20px;
     text-align: center;
-    font-size: 10px;
+    font-size: 50px;
     color: lightcyan;
 }
 .footer > #restartbutton{
@@ -44,7 +49,7 @@ body{
     border:none;
     color:lightseagreen;
     background-color: black;
-    font-size: 50px;
+    font-size: 20px;
     display:inline-block;
     margin-right: 50px;;
 }
