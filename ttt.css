@@ -1,0 +1,51 @@
+body{
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/490/203/669/4k-battle-space-screenshot-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+.header{
+    padding-bottom: 10px;
+    font-size: 70px;
+    text-shadow: 50px;
+    color:lightgoldenrodyellow;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.cell{
+    background-position: right;
+    background-image: url(https://e0.pxfuel.com/wallpapers/44/1/desktop-wallpaper-blue-geometric-technology-honeycomb-background-blue-technology-blue-black-background-for-dark-blue-geometric-thumbnail.jpg);
+    border:2px solid;
+    border-radius: 15px;
+    border-color: black;
+    height:100px;
+    width:100px;
+    cursor:pointer;
+}
+
+.cells {
+    padding: 0%;
+    padding-left: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    margin-bottom: 20px;
+}
+
+.footer > #statustext{
+    padding:20px;
+    text-align: center;
+    font-size: 10px;
+    color: lightcyan;
+}
+.footer > #restartbutton{
+    display:flex;
+    border-radius: 5px;
+    border:none;
+    color:lightseagreen;
+    background-color: black;
+    font-size: 50px;
+    display:inline-block;
+    margin-right: 50px;;
+}
+
