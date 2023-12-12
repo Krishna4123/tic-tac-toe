@@ -2,6 +2,7 @@ body{
     background-image: url(https://ychef.files.bbci.co.uk/1600x900/p05lfxm5.webp);
     background-repeat: no-repeat;
     background-size:cover;
+    background-position: center;
 
 }
 .header{
