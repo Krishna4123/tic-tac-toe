@@ -18,3 +18,51 @@ document.addEventListener("DOMContentLoaded", function () {
         [2, 4, 6],
       ];
   
+      for (let combo of winningCombos) {
+        const [a, b, c] = combo;
+        if (
+          gameBoard[a] &&
+          gameBoard[a] === gameBoard[b] &&
+          gameBoard[a] === gameBoard[c]
+        ) {
+          return gameBoard[a];
+        }
+      }
+  
+      return null;
+    }
+  
+    function checkDraw() {
+      return gameBoard.every((cell) => cell !== "");
+    }
+  
+    function handleClick(event) {
+      const cellIndex = event.target.getAttribute("cellindex");
+  
+      if (gameBoard[cellIndex] === "" && !checkWinner()) {
+        gameBoard[cellIndex] = currentPlayer;
+        event.target.textContent = currentPlayer;
+  
+        const winner = checkWinner();
+        if (winner) {
+          statusText.textContent = `${winner} wins!`;
+        } else if (checkDraw()) {
+          statusText.textContent = "It's a draw!";
+        } else {
+          currentPlayer = currentPlayer === "X" ? "O" : "X";
+          statusText.textContent = `Current Player: ${currentPlayer}`;
+        }
+      }
+    }
+  
+    function restartGame() {
+      gameBoard = ["", "", "", "", "", "", "", "", ""];
+      cells.forEach((cell) => (cell.textContent = ""));
+      statusText.textContent = "Current Player: X";
+      currentPlayer = "X";
+    }
+  
+    cells.forEach((cell) => cell.addEventListener("click", handleClick));
+    restartButton.addEventListener("click", restartGame);
+  });
+  
